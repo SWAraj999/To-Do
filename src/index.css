@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.item-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.item-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+.item-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.item-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500ms, transform 500ms;
+}
+
+/* Custom styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+input::placeholder {
+  color: #d1d5db;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.todo-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.todo-item:hover {
+  transform: scale(1.05);
+}
+
+.todo-item .text {
+  transition: all 0.3s ease;
+}
+
+.todo-item.completed .text {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
